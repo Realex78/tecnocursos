@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es-MX">
+  <head>
+    <meta charset="utf-8">
+    <title>Tecnocursos.com</title>
+    <meta content="Proyecto para Código Facilito. La página perfecta para aprender de cursos variando desde programación hasta edicíón de video y fotografía." name="desription">
+    <link href="https://fonts.googleapis.com/css?family=Coda|Roboto:300,400" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="7" data-name="image-counter">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link href="imgs/icon.png" rel="icon" type="image/png">
+    <link href="https://tecnocursos.herokuapp.com" rel="canonical">
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+    <p class="browserupgrade">
+      Estás utilizando un navegador web
+      <strong>desactualizado.</strong>
+      Porfavor
+      <a href="https://browsehappy.com/">actualiza tu navegador</a>
+      para mejorar tu experiencia en Tecnocursos.com
+    </p>
+    ![endif]-->
+    <div class="video-container">
+      <video autoplay="true" height="720" loop="true" poster="videos/cover.jpg" width="1280">
+        <source src="videos/cover.mp4" typ="video/mp4">
+        <source src="videos/cover.webm" typ="video/webm">
+        <source src="videos/cover.ogv" typ="video/ogv">
+      </video>
+    </div>
+    <div class="row full-height middle-xs center-xs relative up" id="home">
+      <div class="col-xs-12">
+        <div class="box white-text">
+          <img src="imgs/logo.png">
+          <h1 class="coda title no-margin">Tecnocursos.com</h1>
+          <p id="courses">
+            <i class="glyphicon glyphicon-apple"></i>
+            Más de 8 cursos disponibles!
+          </p>
+        </div>
+      </div>
+      <nav class="fixed top right white-text navigation" id="navigation">
+        <ul>
+          <li>
+            <a class="medium" href="#home">Inicio</a>
+          </li>
+          <li>
+            <a class="medium" href="#courses">Cursos</a>
+          </li>
+          <li>
+            <a class="medium" href="#gallery">Galería</a>
+          </li>
+          <li>
+            <a class="medium" href="#account">Cuenta</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="absolute black large-padding white-text full-width" id="description">
+        <div class="row middle-xs center-xs">
+          <div class="col-xs-7 col-sm-6 white-text medium">
+            Nuevos cursos cada mes
+          </div>
+          <div class="col-xs hidden" id="sticky-navigation">
+            <div class="box">
+              <i class="glyphicon glyphicon-menu-hamburger white-text subtitle text-right glyphicon-remove" id="nav-control"></i>
+              <nav class="navigation" id="responsive-nav">
+                <ul>
+                  <li>
+                    <a class="nav-link" href="#home">Inicio</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#courses">Cursos</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#gallery">Galería</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#account">Cuenta</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center relative" id="courses">
+      <div class="absolute" id="courses-title">
+        <h2 class="coda title white">Cursos</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6 courses" style="background-image:url(imgs/courses/html-thumb.jpg)">
+          <div class="screen">
+            <div class="row middle-xs full-height">
+              <div class="col-xs-12">
+                <h3 class="roboto white-text subtitle">HTML</h3>
+                <p class="no-margin white-text">Gratis!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6 courses" style="background-image:url(imgs/courses/css-thumb.jpg)">
+          <div class="screen">
+            <div class="row middle-xs full-height">
+              <div class="col-xs-12">
+                <h3 class="roboto white-text subtitle">CSS</h3>
+                <p class="no-margin white-text">Gratis!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6 courses" style="background-image:url(imgs/courses/javascript-thumb.jpg)">
+          <div class="screen">
+            <div class="row middle-xs full-height">
+              <div class="col-xs-12">
+                <h3 class="roboto white-text subtitle">JavaScript</h3>
+                <p class="no-margin white-text">Requiere Pro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6 courses" style="background-image:url(imgs/courses/python-thumb.jpg)">
+          <div class="screen">
+            <div class="row middle-xs full-height">
+              <div class="col-xs-12">
+                <h3 class="roboto white-text subtitle">Python</h3>
+                <p class="no-margin white-text">Gratis!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6 courses" style="background-image:url(imgs/courses/android-thumb.jpg)">
+          <div class="screen">
+            <div class="row middle-xs full-height">
+              <div class="col-xs-12">
+                <h3 class="roboto white-text subtitle">Android</h3>
+                <p class="no-margin white-text">Requiere Pro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6 courses" style="background-image:url(imgs/courses/swift-thumb.jpg)">
+          <div class="screen">
+            <div class="row middle-xs full-height">
+              <div class="col-xs-12">
+                <h3 class="roboto white-text subtitle">Swift</h3>
+                <p class="no-margin white-text">Gratis!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6 courses" style="background-image:url(imgs/courses/unity-thumb.jpg)">
+          <div class="screen">
+            <div class="row middle-xs full-height">
+              <div class="col-xs-12">
+                <h3 class="roboto white-text subtitle">Unity</h3>
+                <p class="no-margin white-text">Requiere Pro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6 courses" style="background-image:url(imgs/courses/video-thumb.jpg)">
+          <div class="screen">
+            <div class="row middle-xs full-height">
+              <div class="col-xs-12">
+                <h3 class="roboto white-text subtitle">Edición de Video</h3>
+                <p class="no-margin white-text">Gratis!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gallery">
+      <div class="inner">
+        <div class="image" style="background-image:url(./imgs/slider/slider1.jpg)"></div>
+        <div class="image" style="background-image:url(./imgs/slider/slider2.jpg)"></div>
+        <div class="image" style="background-image:url(./imgs/slider/slider3.jpg)"></div>
+        <div class="image" style="background-image:url(./imgs/slider/slider4.jpg)"></div>
+        <div class="image" style="background-image:url(./imgs/slider/slider5.jpg)"></div>
+        <div class="image" style="background-image:url(./imgs/slider/slider6.jpg)"></div>
+        <div class="image" style="background-image:url(./imgs/slider/slider7.jpg)"></div>
+        <div class="image" style="background-image:url(./imgs/slider/slider8.jpg)"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card white black-text text-center relative">
+        <h3 class="coda medium slim">
+          En
+          <strong class="roboto medium">Tecnocursos.com</strong>
+          hacemos cursos de
+          <strong class="roboto medium">calidad</strong>
+        </h3>
+        <p>
+          Tecnocursos.com es la página perfecta para que todas las personas de todas las edades aprendan cómo utilizar tecnollogía. Aprende de una variedad de cursos de calidad hechos por nuestros tutores. Tenemos una amplia variedad de temas para aprender en Tecnocursos.com, como HTML, CSS, JavaScript, Phython, Android, Swift, Unity e Edición de Video. Aprende todo eso en un solo sitio web, en
+          <strong class="roboto medium">Tecnocursos.com</strong>
+          <div class="large-padding meidum black white-text">
+            <div class="text-center roboto medium">
+              Este sitio cuenta con versión offline.
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
+    <div class="black white-text full-height" id="account">
+      <div class="row middle-xs full-height">
+        <div class="col-xs-12">
+          <div class="box">
+            <form action="https://formspree.io/rentopa78@infinitummail.com" class="step-form white-text" id="new-account" method="POST">
+              <p class="text-center coda medium">
+                Crea tu cuenta en
+                <strong class="roboto medium">Tecnocursos.com</strong>
+                y empieza a aprender ahora mismo!
+              </p>
+              <div class="row center-xs middle-xs">
+                <div class="col-xs-12 col-sm-2 col-md-1 first-sm text-center">
+                  <div class="box">
+                    <div class="path-step active"></div>
+                    <div class="path-step"></div>
+                    <div class="path-step"></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 first-xs">
+                  <div class="box">
+                    <fieldset class="step active">
+                      <input class="input" name="email" placeholder="Correo electrónico" required type="email">
+                    </fieldset>
+                    <fieldset class="step">
+                      <input class="input" name="user-name" placeholder="Nombre de Usuario" required type="text">
+                    </fieldset>
+                    <fieldset class="step">
+                      <input class="input" name="password" placeholder="Contraseña" required type="password">
+                    </fieldset>
+                    <button class="btn btn-success" type="submit">
+                      Crear cuenta
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="location">
+      <div id="map"></div>
+      <div class="black large-padding white-text text-center medium" id="message"></div>
+    </div>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      window.jQuery || document.write("<script src='./js/vendor/jquery-1.12.0.min.js'><\/script>")
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOIKNwLAwEr_kisri0P7GLPKLsECW9r2s"></script>
+    <script src="./dist/app.js"></script>
+    <script src="js/push.min.js"></script>
+  </body>
+</html>

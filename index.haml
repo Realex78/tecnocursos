@@ -1,0 +1,123 @@
+-gallery = ["slider1.jpg", "slider2.jpg", "slider3.jpg", "slider4.jpg", "slider5.jpg", "slider6.jpg", "slider7.jpg", "slider8.jpg"]
+!!!5
+%html{class:"no-js", lang:"es-MX"}
+	%head
+		%meta{charset:"utf-8"}
+		%title Tecnocursos.com
+		%meta{name:"desription", content:"Proyecto para Código Facilito. La página perfecta para aprender de cursos variando desde programación hasta edicíón de video y fotografía."}
+		%link{href:"https://fonts.googleapis.com/css?family=Coda|Roboto:300,400", rel:"stylesheet"}
+		%link{rel:"stylesheet", href:"css/normalize.css"}
+		%link{rel:"stylesheet", href:"css/bootstrap.min.css"}
+		%link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"}
+		%link{rel:"stylesheet", href:"css/style.css"}
+		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+		%meta{:"data-name" => "image-counter", content:"#{gallery.size - 1}"}
+		%script{src:"js/vendor/modernizr-2.8.3.min.js"}
+		%link{rel:"icon", type:"image/png", href:"imgs/icon.png"}
+		%link{rel:"canonical", href:"https://tecnocursos.herokuapp.com"}
+	%body
+		="<!--[if lt IE 9]>"
+		%p{class:"browserupgrade"} 
+			Estás utilizando un navegador web 
+			%strong desactualizado.
+			Porfavor 
+			%a{href:"https://browsehappy.com/"}actualiza tu navegador
+			para mejorar tu experiencia en Tecnocursos.com
+		="![endif]-->"
+		.video-container
+			%video{autoplay:"true", loop:"true", width:"1280", height:"720", poster:"videos/cover.jpg"}
+				%source{src:"videos/cover.mp4", typ:"video/mp4"}
+				%source{src:"videos/cover.webm", typ:"video/webm"}
+				%source{src:"videos/cover.ogv", typ:"video/ogv"}
+		.row.full-height.middle-xs.center-xs.relative.up#home
+			.col-xs-12
+				.box.white-text
+					%img{src:"imgs/logo.png"}
+					%h1.coda.title.no-margin Tecnocursos.com
+					%p#courses
+						%i.glyphicon.glyphicon-apple
+						Más de 8 cursos disponibles!
+			%nav.fixed.top.right.white-text.navigation#navigation
+				-menu = [{title:"Inicio", link:"#home"}, {title:"Cursos", link:"#courses"}, {title:"Galería", link:"#gallery"}, {title:"Cuenta", link:"#account"}]
+				%ul
+					-menu.each do |item|
+						%li
+							%a.medium{href:item[:link]}= item[:title]
+			.absolute.black.large-padding.white-text.full-width#description
+				.row.middle-xs.center-xs
+					.col-xs-7.col-sm-6.white-text.medium
+						Nuevos cursos cada mes
+					.col-xs.hidden#sticky-navigation
+						.box
+							%i.glyphicon.glyphicon-menu-hamburger.white-text.subtitle.text-right.glyphicon-remove#nav-control
+							%nav.navigation#responsive-nav
+								-menu = [{title:"Inicio", link:"#home"}, {title:"Cursos", link:"#courses"}, {title:"Galería", link:"#gallery"}, {title:"Cuenta", link:"#account"}]
+								%ul
+									-menu.each do |item|
+										%li
+											%a.nav-link{href:item[:link]}= item[:title]
+		.text-center.relative#courses
+			.absolute#courses-title
+				%h2.coda.title.white Cursos
+			-courses = [{name: "HTML", image: "html", price: "Gratis!"}, {name: "CSS", image: "css", price: "Gratis!"}, {name: "JavaScript", image: "javascript", price: "Requiere Pro"}, {name: "Python", image: "python", price: "Gratis!"}, {name: "Android", image: "android", price: "Requiere Pro"}, {name: "Swift", image: "swift", price: "Gratis!"}, {name: "Unity", image: "unity", price: "Requiere Pro"}, {name: "Edición de Video", image: "video", price: "Gratis!"}]
+			.row
+				-courses.each do |photo|
+					.col-md-6.col-lg-3.col-sm-6.col-xs-6.courses{style: "background-image:url(imgs/courses/#{photo[:image]}-thumb.jpg)"}
+						.screen
+							.row.middle-xs.full-height
+								.col-xs-12
+									%h3.roboto.white-text.subtitle= "#{photo[:name]}"
+									%p.no-margin.white-text= "#{photo[:price]}"
+		#gallery
+			.inner
+				-gallery.each do |image|
+					.image{style:"background-image:url(./imgs/slider/#{image})"}
+		.container
+			.card.white.black-text.text-center.relative
+				%h3.coda.medium.slim
+					En
+					%strong.roboto.medium  Tecnocursos.com
+					hacemos cursos de
+					%strong.roboto.medium  calidad
+				%p 
+					Tecnocursos.com es la página perfecta para que todas las personas de todas las edades aprendan cómo utilizar tecnollogía. Aprende de una variedad de cursos de calidad hechos por nuestros tutores. Tenemos una amplia variedad de temas para aprender en Tecnocursos.com, como HTML, CSS, JavaScript, Phython, Android, Swift, Unity e Edición de Video. Aprende todo eso en un solo sitio web, en
+					%strong.roboto.medium Tecnocursos.com
+					.large-padding.meidum.black.white-text
+						.text-center.roboto.medium
+							Este sitio cuenta con versión offline.
+		.black.white-text.full-height#account
+			.row.middle-xs.full-height
+				.col-xs-12
+					.box
+						%form.white-text{action:"https://formspree.io/rentopa78@infinitummail.com", method:"POST", id:"new-account", class:"step-form"}
+							%p.text-center.coda.medium
+								Crea tu cuenta en
+								%strong.roboto.medium Tecnocursos.com
+								y empieza a aprender ahora mismo!
+							.row.center-xs.middle-xs
+								.col-xs-12.col-sm-2.col-md-1.first-sm.text-center
+									.box
+										-3.times do |i|
+											-if i == 0
+												.path-step.active
+											-else
+												.path-step
+								.col-xs-12.col-sm-3.first-xs
+									.box
+										%fieldset.step.active
+											%input{type:"email", name:"email", placeholder:"Correo electrónico", class: "input", required:true}
+										%fieldset.step
+											%input{type:"text", name:"user-name", placeholder:"Nombre de Usuario", class: "input", required:true}
+										%fieldset.step
+											%input{type:"password", name:"password", placeholder:"Contraseña", class: "input", required:true}
+										%button{class: "btn btn-success", type: "submit"}
+											Crear cuenta
+		#location
+			#map
+			#message.black.large-padding.white-text.text-center.medium
+		%script{src:"https://code.jquery.com/jquery-3.2.1.min.js", integrity:"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin:"anonymous"}
+		%script
+			window.jQuery || document.write("<script src='./js/vendor/jquery-1.12.0.min.js'><\/script>")
+		%script{src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyBOIKNwLAwEr_kisri0P7GLPKLsECW9r2s"}
+		%script{src:"./dist/app.js"}
+		%script{src:"js/push.min.js"}
